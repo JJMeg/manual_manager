@@ -8,6 +8,8 @@ public interface userDao {
 
   int insert(user record);
 
+  user selectUsers(user record);
+
   List<user> selectUsers();
 
 }

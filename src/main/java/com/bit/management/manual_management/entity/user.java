@@ -1,5 +1,8 @@
 package com.bit.management.manual_management.entity;
 
+import javax.persistence.Entity;
+
+@Entity
 public class user {
   private Long id;
 

@@ -14,8 +14,12 @@ public class userServiceImpl implements userService {
   private userDao userDao;
 
   @Override
-  public int addUser(user u) {
-    return 0;
+  public int insert(user u) {
+    u.setUserName("testtest");
+    u.setUserPwd("qazwsx");
+    u.setRoleId(0);
+    int addStatus = userDao.insert(u);
+    return addStatus;
   }
 
   @Override
@@ -25,4 +29,6 @@ public class userServiceImpl implements userService {
     PageInfo result = new PageInfo(userDomains);
     return result;
   }
+
+
 }
