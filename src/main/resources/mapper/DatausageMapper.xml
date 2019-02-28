@@ -13,6 +13,18 @@
     <result column="restoration" jdbcType="VARCHAR" property="restoration" />
     <result column="feature" jdbcType="VARCHAR" property="feature" />
   </resultMap>
+  <resultMap id="BaseResultMap0" type="com.bit.management.manual_management.entity.Datausage">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="SMALLINT" property="id" />
+    <result column="segment" jdbcType="VARCHAR" property="segment" />
+    <result column="registration" jdbcType="VARCHAR" property="registration" />
+    <result column="reconstruct" jdbcType="VARCHAR" property="reconstruct" />
+    <result column="VR" jdbcType="VARCHAR" property="vr" />
+    <result column="restoration" jdbcType="VARCHAR" property="restoration" />
+    <result column="feature" jdbcType="VARCHAR" property="feature" />
+  </resultMap>
   <resultMap id="BaseResultMap1" type="com.bit.management.manual_management.entity.Datausage">
     <!--
       WARNING - @mbg.generated

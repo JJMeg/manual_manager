@@ -1,8 +1,9 @@
 package com.bit.management.manual_management.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
-public class User {
+public class User implements Serializable {
     /**
      * id
      */

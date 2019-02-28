@@ -1,20 +1,29 @@
 package com.bit.management.manual_management.service.Impl;
 
+import com.bit.management.manual_management.dao.userDao;
 import com.bit.management.manual_management.entity.User;
 import com.bit.management.manual_management.service.userService;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-@Service
+@Service("userService")
 public class userServiceImpl implements userService {
+
+  @Autowired
+  private userDao userDao;
+
   @Override
-  public int insert(User u) {
-    return 0;
+  public void insert(User u) {
+
+
   }
 
   @Override
-  public int addUser(User u) {
-    return 0;
+  @Transactional
+  public void addUser(User u) {
+    userDao.addUser(u);
   }
 
   @Override

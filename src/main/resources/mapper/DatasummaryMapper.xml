@@ -31,4 +31,19 @@
     <result column="fileServer" jdbcType="TINYINT" property="fileserver" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
+  <resultMap id="BaseResultMap2" type="com.bit.management.manual_management.entity.Datasummary">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="patientName" jdbcType="VARCHAR" property="patientname" />
+    <result column="patientId" jdbcType="VARCHAR" property="patientid" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+    <result column="fileName" jdbcType="VARCHAR" property="filename" />
+    <result column="fileNum" jdbcType="SMALLINT" property="filenum" />
+    <result column="fileServer" jdbcType="TINYINT" property="fileserver" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
 </mapper>
