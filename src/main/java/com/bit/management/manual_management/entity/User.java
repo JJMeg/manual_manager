@@ -24,7 +24,7 @@ public class User {
      * 权限0:普通，1:管理员
      */
     @Column(name = "roleId")
-    private int roleid;
+    private Byte roleid;
 
     /**
      * 获取id
@@ -85,7 +85,7 @@ public class User {
      *
      * @return roleId - 权限0:普通，1:管理员
      */
-    public int getRoleid() {
+    public Byte getRoleid() {
         return roleid;
     }
 
@@ -94,7 +94,7 @@ public class User {
      *
      * @param roleid 权限0:普通，1:管理员
      */
-    public void setRoleid(int roleid) {
+    public void setRoleid(Byte roleid) {
         this.roleid = roleid;
     }
 }

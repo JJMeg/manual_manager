@@ -9,7 +9,7 @@
     <result column="labelKey" jdbcType="VARCHAR" property="labelkey" />
     <result column="labelValue" jdbcType="VARCHAR" property="labelvalue" />
   </resultMap>
-  <resultMap id="BaseResultMap" type="com.bit.management.manual_management.entity.Labelsummary">
+  <resultMap id="BaseResultMap1" type="com.bit.management.manual_management.entity.Labelsummary">
     <!--
       WARNING - @mbg.generated
     -->
@@ -17,7 +17,15 @@
     <result column="labelKey" jdbcType="VARCHAR" property="labelkey" />
     <result column="labelValue" jdbcType="VARCHAR" property="labelvalue" />
   </resultMap>
-  <resultMap id="BaseResultMap" type="com.bit.management.manual_management.entity.Labelsummary">
+  <resultMap id="BaseResultMap2" type="com.bit.management.manual_management.entity.Labelsummary">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="SMALLINT" property="id" />
+    <result column="labelKey" jdbcType="VARCHAR" property="labelkey" />
+    <result column="labelValue" jdbcType="VARCHAR" property="labelvalue" />
+  </resultMap>
+  <resultMap id="BaseResultMap3" type="com.bit.management.manual_management.entity.Labelsummary">
     <!--
       WARNING - @mbg.generated
     -->

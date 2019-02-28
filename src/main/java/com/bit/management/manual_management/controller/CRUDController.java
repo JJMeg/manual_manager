@@ -17,7 +17,7 @@ public class CRUDController {
   public boolean addUser(User u) {
     u.setUserpwd("qaz");
     u.setUsername("qaz");
-    u.setRoleid(0);
+    u.setRoleid((byte)0);
     int addStatus = service.addUser(u);
     return addStatus > 0;
   }

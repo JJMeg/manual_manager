@@ -1,16 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.bit.management.manual_management.mapper.DatausageMapper" >
-  <resultMap id="BaseResultMap" type="com.bit.management.manual_management.entity.Datausage" >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bit.management.manual_management.mapper.DatausageMapper">
+  <resultMap id="BaseResultMap" type="com.bit.management.manual_management.entity.Datausage">
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="id" property="id" jdbcType="SMALLINT" />
-    <result column="segment" property="segment" jdbcType="VARCHAR" />
-    <result column="registration" property="registration" jdbcType="VARCHAR" />
-    <result column="reconstruct" property="reconstruct" jdbcType="VARCHAR" />
-    <result column="VR" property="vr" jdbcType="VARCHAR" />
-    <result column="restoration" property="restoration" jdbcType="VARCHAR" />
-    <result column="feature" property="feature" jdbcType="VARCHAR" />
+    <id column="id" jdbcType="SMALLINT" property="id" />
+    <result column="segment" jdbcType="VARCHAR" property="segment" />
+    <result column="registration" jdbcType="VARCHAR" property="registration" />
+    <result column="reconstruct" jdbcType="VARCHAR" property="reconstruct" />
+    <result column="VR" jdbcType="VARCHAR" property="vr" />
+    <result column="restoration" jdbcType="VARCHAR" property="restoration" />
+    <result column="feature" jdbcType="VARCHAR" property="feature" />
+  </resultMap>
+  <resultMap id="BaseResultMap1" type="com.bit.management.manual_management.entity.Datausage">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="SMALLINT" property="id" />
+    <result column="segment" jdbcType="VARCHAR" property="segment" />
+    <result column="registration" jdbcType="VARCHAR" property="registration" />
+    <result column="reconstruct" jdbcType="VARCHAR" property="reconstruct" />
+    <result column="VR" jdbcType="VARCHAR" property="vr" />
+    <result column="restoration" jdbcType="VARCHAR" property="restoration" />
+    <result column="feature" jdbcType="VARCHAR" property="feature" />
   </resultMap>
 </mapper>

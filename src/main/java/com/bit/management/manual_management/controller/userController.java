@@ -17,7 +17,7 @@ public class userController {
   @ResponseBody
   public User getuser() {
     User u = new User();
-    u.setRoleid(0);
+    u.setRoleid((byte)0);
     u.setUsername("Meg");
     u.setUserpwd("123123");
     return u;
@@ -27,7 +27,7 @@ public class userController {
   @ResponseBody
   public response getuserJson() {
     User u = new User();
-    u.setRoleid(0);
+    u.setRoleid((byte)0);
     u.setUsername("Meg");
     u.setUserpwd("123");
     return response.ok(u);
@@ -36,7 +36,7 @@ public class userController {
   @RequestMapping("/getuserJsonTest")
   public String getuserJsonTest(ModelMap map) {
     User u = new User();
-    u.setRoleid(0);
+    u.setRoleid((byte)0);
     u.setUsername("Meg");
     u.setUserpwd("123");
     map.addAttribute("user", u);
