@@ -27,6 +27,12 @@
         <javaClientGenerator targetPackage="com.bit.management.manual_management.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
         <table tableName="dataType"></table>
+        <table tableName="labelSummary"></table>
+        <table tableName="user"></table>
+        <table tableName="dataUsage"></table>
+        <table tableName="fileServer"></table>
+        <table tableName="dataSummary"></table>
+
 
     </context>
 </generatorConfiguration>

@@ -1,15 +1,17 @@
 package com.bit.management.manual_management.dao;
 
-import com.bit.management.manual_management.entity.user;
+import com.bit.management.manual_management.entity.User;
 
 import java.util.List;
 
 public interface userDao {
 
-  int insert(user record);
+  int insert(User record);
 
-  user selectUsers(user record);
+  User selectUsers(User record);
 
-  List<user> selectUsers();
+  List<User> selectUsers();
+
+  int addUser(User record);
 
 }
