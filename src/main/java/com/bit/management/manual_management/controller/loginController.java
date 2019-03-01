@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class loginController {
   @RequestMapping(value = "/")
   public String hello() {
-    return "login.html";
+    //return "home.html";
+    return "index";
   }
 
 }

@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--引入样式表-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui-1.6.10/themes/default/easyui.css" th:href="@{static/jquery-easyui-1.6.10/themes/default/easyui.css}"/>
+    <!--引入图标-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui-1.6.10/themes/icon.css" th:href="@{static/jquery-easyui-1.6.10/themes/icon.css}"/>
+    <!--引入JavaScript，先引入jquery，再引入easyui-->
+    <script type="text/javascript" src="../jquery-easyui-1.6.10/jquery.min.js" th:src="@{static/jquery-easyui-1.6.10/jquery.min.js}"></script>
+    <script type="text/javascript" src="../jquery-easyui-1.6.10/jquery.easyui.min.js" th:src="@{static/jquery-easyui-1.6.10/jquery.easyui.min.js}"></script>
+
 </head>
 <body>
-------------sdfsdfadsfa
+<!--<div class="easyui-texteditor" title="TextEditor" style="width:700px;height:300px;padding:20px">-->
+<!--<h3 style="text-align:center">TextEditor</h3>-->
+<!--<p style="text-align:center">TextEditor is a lightweight html5 editor based on EasyUI. It is completely customizable to fit your needs.</p>-->
+<!--</div>-->
+
+
+<ul id="tree">
+    <li>
+        <span>彩蛋1</span>
+    </li>
+    <li>
+        <span>彩蛋2</span>
+    </li>
+</ul>
+
+<script type="text/javascript">
+    $(function () {
+        $("#tree").tree({
+            checkbox:true,
+        });
+    })
+</script>
 </body>
 </html>
