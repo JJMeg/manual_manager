@@ -10,7 +10,7 @@ public class HelloController {
 
   @RequestMapping(value = "/home")
   public String hello(){
-    return "he.html";
+    return "backend/data-detail.html";
   }
 
 }
