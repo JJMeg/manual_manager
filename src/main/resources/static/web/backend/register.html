@@ -5,6 +5,11 @@
     <title>智能归档平台注册页</title>
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/page/backend/register.css" rel="stylesheet">
+    <script>
+        function checkForm() {
+            alert("hah")
+        }
+    </script>
 </head>
 <body>
 
@@ -26,7 +31,7 @@
             <div class="input-hd"><h2>用户注册</h2></div>
 
             <div class="input-area">
-                <form name="regForm" method="post">
+                <form name="regForm" method="get" action="#" onsubmit="return checkForm()">
                     <!--登陆表单-->
                     <div class="input-item">
                         <p>登录名：</p>
@@ -43,7 +48,9 @@
                         <input type="text" name="confirmPwd" placeholder="请再输入密码">
                     </div>
 
-                    <div class="login-btn"  onclick="javascript:window.location='mgt_console.html'">注册</div>
+                    <div class="login-btn" >
+                        <input type="submit" value="注册" style="color: #fff;background: #00a2ca">
+                    </div>
                 </form>
             </div>
 
