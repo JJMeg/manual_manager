@@ -7,7 +7,34 @@
     <link href="../css/page/backend/register.css" rel="stylesheet">
     <script>
         function checkForm() {
-            alert("hah")
+            var patten = /^[a-zA-Z]\w{3,15}$/ig;
+            var username = document.getElementById("username").value;
+            if (username == ""){
+                alert("用户名不可为空！");
+                return false;
+            }else if (!patten.test(username)){
+                alert("用户名非法！");
+                return false;
+            }
+        }
+
+        function showUserTips(){
+
+            document.getElementById("userTips").innerHTML = "用户名必填";
+        }
+
+        function checkName(){
+            var patten = /^[a-zA-Z]\w{3,15}$/ig;
+            var username = document.getElementById("username").value;
+            if (username == ""){
+                document.getElementById("userTips").innerHTML = "<font color='#b22222'>用户名错误</font>";
+                return false;
+            }else if (!patten.test(username)){
+                alert("用户名非法！");
+                return false;
+            }else{
+                document.getElementById("userTips").innerHTML = "";
+            }
         }
     </script>
 </head>
@@ -35,12 +62,12 @@
                     <!--登陆表单-->
                     <div class="input-item">
                         <p>登录名：</p>
-                        <input type="text" name="username" placeholder="请输入账号/邮箱">
+                        <input type="text" id="username" name="username" placeholder="请输入账号/邮箱" onfocus="showUserTips()" onblur="checkName()"><span id="userTips"></span>
                     </div>
 
                     <div class="input-item">
                         <p>登录密码：</p>
-                        <input type="text" name="password" placeholder="请输入密码">
+                        <input type="text" id="password" name="password" placeholder="请输入密码">
                     </div>
 
                     <div class="input-item">
