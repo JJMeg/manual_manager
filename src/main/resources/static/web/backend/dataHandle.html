@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>图像仓库管理</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/backend.css" rel="stylesheet">
+    <link href="../css/page/backend/self.css" rel="stylesheet">
+
+    <link href="../js/datepicker/css/bootstrap.css" rel="stylesheet">
+    <link href="../js/datepicker/css/bootstrap-datepicker.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../static/jquery-easyui-1.6.10/themes/default/easyui.css"
+          th:href="@{jquery-easyui-1.6.10/themes/default/easyui.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/jquery-easyui-1.6.10/themes/icon.css"
+          th:href="@{jquery-easyui-1.6.10/themes/icon.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/jquery-easyui-1.6.10/themes/color.css"
+          th:href="@{jquery-easyui-1.6.10/themes/color.css}"/>
+    <script type="text/javascript" src="../static/jquery-easyui-1.6.10/jquery.min.js"
+            th:src="@{jquery-easyui-1.6.10/jquery.min.js}"></script>
+    <script type="text/javascript" src="../static/jquery-easyui-1.6.10/ajaxfileupload.js"
+            th:src="@{jquery-easyui-1.6.10/ajaxfileupload.js}"></script>
+    <script type="text/javascript" src="../static/jquery-easyui-1.6.10/jquery.easyui.min.js"
+            th:src="@{jquery-easyui-1.6.10/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" src="../static/js/upload.js" th:src="@{js/upload.js}"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/jeasyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/jeasyui/themes/icon.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/jquery.easyui.min.js"></script>
+</head>
+<body>
+<div id="hd">
+    <div class="header-nav">
+        <div class="navigation-inner">
+            <div class="logo">
+                <h1>
+                    <a href="mgt_console.html" class="logo-img">主页</a>
+                </h1>
+            </div>
+
+
+            <div class="login-user">
+                <i class="iconfont">&#xe60d;</i>
+                <a class="javascript:;">您好！testUser</a>
+                <i class="iconfont">&#xe61c;</i>
+
+                <div class="user-opt-panel">
+                    <ul class="user-opt">
+                        <li>
+                            <a href="account_center.html">
+                                <i class="iconfont">&#xe60d;</i>
+                                <span class="pf-opt-name">用户信息</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order.html">
+                                <i class="iconfont">&#xe60c;</i>
+                                <span class="pf-opt-name">用户贡献</span>
+                            </a>
+                        </li>
+                        <li class="div-line">
+                            <a href="login.html">
+                                <i class="iconfont">&#xe60b;</i>
+                                <span class="pf-opt-name">退出</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="bd">
+    <div class="main-wrap-bk clearfix">
+        <div class="sider-bar-bk">
+            <ul class="sider-nav">
+                <li class="sider-nav-item current">
+                    <h3>
+                        <a href="javascript:;">
+                            <i class="iconfont">&#xe610;</i>
+                            <span>数据管理</span>
+                            <i class="iconfont arrow-right">&#xe611;</i>
+                            <i class="iconfont arrow-down">&#xe615;</i>
+                        </a>
+                    </h3>
+                    <ul class="sider-nav-s">
+                        <li><a href="cloud_service.html">智能导入</a></li>
+                        <li class="current"><a href="dataHandle.html">数据下载</a></li>
+                        <li><a href="safe_protect.html">数据总览</a></li>
+                        <li><a href="self-work.html">站点设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="sider-nav-item">
+                    <h3>
+                        <a href="javascript:;">
+                            <i class="iconfont">&#xe613;</i>
+                            <span>数据报告</span>
+                            <i class="iconfont arrow-right">&#xe611;</i>
+                            <i class="iconfont arrow-down">&#xe615;</i>
+                        </a>
+                    </h3>
+                    <ul class="sider-nav-s">
+                        <li><a href="#">数据统计</a></li>
+                        <li><a href="#">数据分析</a></li>
+                        <li><a href="#">数据介绍</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bd-content-wrap">
+            <div class="bd-content">
+                <div class="title-left-line">数据下载中心
+                    <div class="service-status">
+                        <i class="iconfont">&#xe617;</i>
+                        <span class="info">服务状态：</span>
+                        <span class="status impInfo">内测版</span>
+                    </div>
+                </div>
+
+
+                <div class="data-result page" data-tab="data-result">
+
+                    <div class="search-box">
+                        <div class="form-kv clearfix">
+                            <div class="form-kv-label">时间范围：</div>
+                            <div class="form-content">
+                                <div class="date-pick">
+                                    <input type="text" id="starttime">
+                                    <i class="iconfont">&#xe619;</i>
+                                </div>
+                                <span class="divsion">-</span>
+                                <div class="date-pick">
+                                    <input type="text" id="endtime">
+                                    <i class="iconfont">&#xe619;</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-kv clearfix">
+                            <div class="form-kv-label">数据类型：</div>
+                            <select class="seletor-v" >
+                                <option font-size="16px">医院</option>
+                                <option font-size="16px"></option>
+                                <option font-size="16px"></option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-kv clearfix">
+                            <div class="form-kv-label">数据用途：</div>
+                            <select class="seletor-v" >
+                                <option font-size="16px"></option>
+                            </select>
+                        </div>
+
+                        <div class="form-kv clearfix">
+                            <div class="form-kv-label">全局搜索：</div>
+                            <div class="form-content">
+                                <input type="text" class="name" placeholder="关键词ID/姓名"/>
+                                <button class="btn btn-blue search-btn">查询</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!--<div class="grid">-->
+                        <!--<div class="grid-opt clearfix">-->
+                            <!--<a class="grid-opt-item source" href="javascript:;">-->
+                                <!--<i class="iconfont">&#xe61a;</i>-->
+                                <!--<span>配置数据源</span>-->
+                            <!--</a>-->
+                        <!--</div>-->
+
+                        <!--<table>-->
+                            <!--<colgroup>-->
+                                <!--<col width="50"></col>-->
+                                <!--<col width="120"></col>-->
+                                <!--<col width="*"></col>-->
+                                <!--<col width="150"></col>-->
+                                <!--<col width="150"></col>-->
+                                <!--<col width="80"></col>-->
+                                <!--<col width="100"></col>-->
+                                <!--<col width="80"></col>-->
+                            <!--</colgroup>-->
+
+                            <!--<thead>-->
+                            <!--<tr>-->
+                                <!--<th>序号</th>-->
+                                <!--<th>最近发生时间 <i class="iconfont up">&#xe61b;</i><i-->
+                                        <!--class="iconfont down current">&#xe61c;</i></th>-->
+                                <!--<th>时间名称</th>-->
+                                <!--<th>事件位置</th>-->
+                                <!--<th>事件类型</th>-->
+                                <!--<th>发生次数</th>-->
+                                <!--<th>状态</th>-->
+                                <!--<th>操作</th>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+
+                            <!--<tbody>-->
+                            <!--<tr>-->
+                                <!--<td class="num">1</td>-->
+                                <!--<td>2016-04-02</td>-->
+                                <!--<td>站点存在web应用漏洞</td>-->
+                                <!--<td>-</td>-->
+                                <!--<td>web应用漏洞</td>-->
+                                <!--<td class="num">4</td>-->
+                                <!--<td class="impInfo">未处理</td>-->
+                                <!--<td><a href="javascript:;">处理</a></td>-->
+                            <!--</tr>-->
+
+                            <!--<tr>-->
+                                <!--<td class="num">1</td>-->
+                                <!--<td>2016-04-02</td>-->
+                                <!--<td>站点存在web应用漏洞</td>-->
+                                <!--<td>-</td>-->
+                                <!--<td>web应用漏洞</td>-->
+                                <!--<td class="num">4</td>-->
+                                <!--<td class="impInfo">未处理</td>-->
+                                <!--<td><a href="javascript:;">处理</a></td>-->
+                            <!--</tr>-->
+
+                            <!--<tr>-->
+                                <!--<td class="num">1</td>-->
+                                <!--<td>2016-04-02</td>-->
+                                <!--<td>站点存在web应用漏洞</td>-->
+                                <!--<td>-</td>-->
+                                <!--<td>web应用漏洞</td>-->
+                                <!--<td class="num">4</td>-->
+                                <!--<td class="impInfo">未处理</td>-->
+                                <!--<td><a href="javascript:;">处理</a></td>-->
+                            <!--</tr>-->
+
+
+                            <!--<tr>-->
+                                <!--<td class="num">1</td>-->
+                                <!--<td>2016-04-02</td>-->
+                                <!--<td>站点存在web应用漏洞</td>-->
+                                <!--<td>-</td>-->
+                                <!--<td>web应用漏洞</td>-->
+                                <!--<td class="num">4</td>-->
+                                <!--<td class="impInfo">未处理</td>-->
+                                <!--<td><a href="javascript:;">处理</a></td>-->
+                            <!--</tr>-->
+
+
+                            <!--<tr>-->
+                                <!--<td class="num">1</td>-->
+                                <!--<td>2016-04-02</td>-->
+                                <!--<td>站点存在web应用漏洞</td>-->
+                                <!--<td>-</td>-->
+                                <!--<td>web应用漏洞</td>-->
+                                <!--<td class="num">4</td>-->
+                                <!--<td class="impInfo">未处理</td>-->
+                                <!--<td><a href="javascript:;">处理</a></td>-->
+                            <!--</tr>-->
+
+
+                            <!--<tr>-->
+                                <!--<td class="num">1</td>-->
+                                <!--<td>2016-04-02</td>-->
+                                <!--<td>站点存在web应用漏洞</td>-->
+                                <!--<td>-</td>-->
+                                <!--<td>web应用漏洞</td>-->
+                                <!--<td class="num">4</td>-->
+                                <!--<td class="impInfo">未处理</td>-->
+                                <!--<td><a href="javascript:;">处理</a></td>-->
+                            <!--</tr>-->
+
+                            <!--<tr>-->
+                                <!--<td class="num">1</td>-->
+                                <!--<td>2016-04-02</td>-->
+                                <!--<td>站点存在web应用漏洞</td>-->
+                                <!--<td>-</td>-->
+                                <!--<td>web应用漏洞</td>-->
+                                <!--<td class="num">4</td>-->
+                                <!--<td class="impInfo">未处理</td>-->
+                                <!--<td><a href="javascript:;">处理</a></td>-->
+                            <!--</tr>-->
+                            <!--</tbody>-->
+                        <!--</table>-->
+                    <!--</div>-->
+                    <div>
+                        <table id="tt" title="查询结果" class="easyui-datagrid" style="width:1170px;height:500px"
+                               url="../data/datagrid_data.json"
+                               idField="itemid" pagination="true"
+                               iconCls="icon-save">
+                            <thead>
+                            <tr>
+                                <th field="ck" checkbox="true"></th>
+                                <th field="itemid" width="50">数据 ID</th>
+                                <th field="productid" width="80">病患姓名</th>
+                                <th field="listprice" width="80" align="right">病患ID</th>
+                                <th field="listprice" width="600" align="right">收录位置</th>
+                                <th field="listprice" width="200" align="right">文件名</th>
+                                <th field="listprice" width="50" align="right">文件数量</th>
+                                <th field="unitcost" width="80" align="right">收录人</th>
+                                <th field="attr1" width="80">收录时间</th>
+                                <th field="status" width="100" align="center">文件服务器</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="s-page">
+    <a href="javascript:;" class="iconfont close-spage">&#xe61e;</a>
+
+    <div class="section">
+        <div class="title-left-line-b">数据说明信息</div>
+        <div class="section-content">
+            <table class="kv-table">
+                <tbody>
+                <tr>
+                    <td class="kv-label">
+                        事件名称
+                    </td>
+                    <td class="kv-content">
+                        站点存在web应用漏洞
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kv-label">
+                        事件续好
+                    </td>
+                    <td class="kv-content">
+                        1
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kv-label">
+                        事件位置
+                    </td>
+                    <td class="kv-content">
+                        http://www.ggg.gov.cn
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kv-label">
+                        事件单位
+                    </td>
+                    <td class="kv-content">
+                        市工信部
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="kv-label">
+                        发生次数
+                    </td>
+                    <td class="kv-content">
+                        5
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="kv-label">
+                        发生时间
+                    </td>
+                    <td class="kv-content">
+                        <p>2016-02-03 12:12:12</p>
+                        <p>2016-02-03 12:12:12</p>
+                        <p>2016-02-03 12:12:12</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="kv-label">
+                        状态
+                    </td>
+                    <td class="kv-content">
+                        <span class="impInfo">未处理</span>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="title-left-line-o">事件处理
+            <a class="opt-item" href="javascript:;">
+                <i class="iconfont">&#xe61d;</i>
+                <span>服务协助</span>
+            </a>
+        </div>
+
+        <div class="section-content">
+            <table class="kv-table">
+                <tbody>
+                <tr>
+                    <td class="kv-label">
+                        处理类型
+                    </td>
+                    <td class="kv-content">
+                        <select>
+                            <option>请选择</option>
+                            <option>已处理</option>
+                            <option>未处理</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kv-label">
+                        处理结果
+                    </td>
+                    <td class="kv-content">
+                        <textarea></textarea>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-blue">提交</button>
+            <button class="btn">关闭</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/layer/layer.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../js/datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="../js/jquery.pagination.js"></script>
+<script type="text/javascript">
+
+    $("#starttime").datepicker({
+        "language": "zh-CN",
+        "format": 'yyyy-mm-dd'
+    })
+    $("#endtime").datepicker({
+        "language": "zh-CN",
+        "format": 'yyyy-mm-dd'
+    })
+    $(".date-pick .iconfont").click(function () {
+        $(this).prev().trigger("focus");
+    });
+
+    $('.pagin').pagination(200, {
+        current_page: 5,
+        items_per_page: 10,
+        setPageNo: true,
+        setItems_per_page: true,
+        callback: function (page, pageItems, panel, evt) {
+            console.log(page);
+            console.log(pageItems);
+
+        }
+    });
+
+    $('table').on('click', 'a', function () {
+        $('.s-page').show();
+    });
+
+    $('.s-page').on('click', '.close-spage', function () {
+        $('.s-page').hide();
+    });
+
+
+    $('.source').click(function () {
+        layer.open({
+            type: 2,
+            title: "配置数据源",
+            area: ['644px', '480px'],
+            btn: ["提交", "关闭"],
+            content: "http://www.baidu.com"
+        });
+    });
+
+    //表格排序事件
+    $('thead').on('click', 'i', function () {
+        $(this).closest('thead').find('i').removeClass('current');
+        $(this).addClass('current');
+    });
+
+</script>
+
+
+
+<script>
+    var data = {"total":28,"rows":[
+            {"date":"03/04/2010","unitcost":10.00,"status":"P","listprice":16.50,"attr1":"Large","itemid":"EST-1"},
+            {"date":"05/04/2009","unitcost":12.00,"status":"P","listprice":18.50,"attr1":"Spotted Adult Female","itemid":"EST-10"},
+            {"date":"12/31/2005","unitcost":12.00,"status":"P","listprice":18.50,"attr1":"Venomless","itemid":"EST-11"},
+            {"date":"03/21/2010","unitcost":12.00,"status":"P","listprice":18.50,"attr1":"Rattleless","itemid":"EST-12"},
+            {"date":"03/06/2003","unitcost":12.00,"status":"P","listprice":18.50,"attr1":"Green Adult","itemid":"EST-13"},
+            {"date":"07/04/2010","unitcost":12.00,"status":"P","listprice":58.50,"attr1":"Tailless","itemid":"EST-14"},
+            {"date":"11/04/2005","unitcost":12.00,"status":"P","listprice":23.50,"attr1":"With tail","itemid":"EST-15"},
+            {"date":"03/23/2010","unitcost":12.00,"status":"P","listprice":93.50,"attr1":"Adult Female","itemid":"EST-16"},
+            {"date":"03/04/2008","unitcost":12.00,"status":"P","listprice":93.50,"attr1":"Adult Male","itemid":"EST-17"},
+            {"date":"03/04/2006","unitcost":92.00,"status":"P","listprice":193.50,"attr1":"Adult Male","itemid":"EST-18"}
+        ]};
+
+    $(function(){
+        $('#tt').datagrid({
+            title:'查询结果',
+            iconCls:'icon-ok',
+            width:1170,
+            height:250,
+            align:'center',
+            singleSelect:true,
+            remoteSort:false,
+            columns:[[
+                {field:'itemid',title:'Item ID',width:60,sortable:true},
+                {field:'listprice',title:'List Price',width:70,align:'right',sortable:true},
+                {field:'unitcost',title:'Unit Cost',width:70,align:'right',sortable:true},
+                {field:'attr1',title:'Attribute',width:120,sortable:true},
+                {field:'date',title:'Date',width:80,sortable:true,align:'center',
+                    sorter:function(a,b){
+                        a = a.split('/');
+                        b = b.split('/');
+                        if (a[2] == b[2]){
+                            if (a[0] == b[0]){
+                                return (a[1]>b[1]?1:-1);
+                            } else {
+                                return (a[0]>b[0]?1:-1);
+                            }
+                        } else {
+                            return (a[2]>b[2]?1:-1);
+                        }
+                    }
+                },
+                {field:'status',title:'Status',width:40,align:'center'}
+            ]]
+        }).datagrid('loadData', data);
+    });
+</script>
+
+
+</body>
+</html>
