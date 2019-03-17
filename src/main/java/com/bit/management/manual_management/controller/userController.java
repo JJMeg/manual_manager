@@ -53,7 +53,7 @@ public class userController {
   public User testSQL() {
     User u = new User();
     u.setUserpwd("qaz");
-    u.setUsername("qaz");
+    u.setUsername("123");
     u.setRoleid((byte)0);
     userService.addUser(u);
 
