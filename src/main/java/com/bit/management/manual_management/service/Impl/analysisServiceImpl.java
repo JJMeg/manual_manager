@@ -1,6 +1,7 @@
 package com.bit.management.manual_management.service.Impl;
 
 import com.bit.management.manual_management.service.analysisService;
+import org.springframework.stereotype.Service;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
@@ -10,6 +11,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+@Service("analysisService")
 public class analysisServiceImpl implements analysisService {
   private static Logger logger = Logger.getLogger(analysisServiceImpl.class.getName());
 
@@ -23,6 +25,7 @@ public class analysisServiceImpl implements analysisService {
     for (File f : dirFile.listFiles()) {
       System.out.println(f.getName());
       if (f.getName().contains(filePrefix)) {
+        logger.info("get yaml file: "+ f.getName());
         return f;
       }
     }

@@ -12,9 +12,9 @@
          INSERT INTO user (username, userpwd, roleid) VALUES (#{username}, #{userpwd}, #{roleid})
     </insert>
 
-    <select id="getByUsername" parameterType="string" resultType="com.bit.management.manual_management.entity.User">
+    <select id="getByUsername" resultType="com.bit.management.manual_management.entity.User">
     SELECT * FROM
-    `user`
+    user
     WHERE
     username = #{username}
   </select>

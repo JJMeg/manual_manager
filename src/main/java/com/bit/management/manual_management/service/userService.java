@@ -10,5 +10,5 @@ public interface userService {
 
   PageInfo<User> findAllUser(int pageNum, int pageSize);
 
-
+  User getByUsername(String username);
 }

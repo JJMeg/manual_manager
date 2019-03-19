@@ -27,6 +27,11 @@ public class userServiceImpl implements userService {
   }
 
   @Override
+  public User getByUsername(String username) {
+    return userDao.getByUsername(username);
+  }
+
+  @Override
   public PageInfo<User> findAllUser(int pageNum, int pageSize) {
     return null;
   }

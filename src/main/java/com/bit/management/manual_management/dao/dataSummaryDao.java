@@ -1,10 +1,12 @@
-package com.bit.management.manual_management.service;
+package com.bit.management.manual_management.dao;
 
 import com.bit.management.manual_management.entity.Datasummary;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-public interface dataSummaryService {
+@Mapper
+public interface dataSummaryDao {
   public Datasummary getById(Long id);
 
   public List<Datasummary> getByPatientName(String patientname);

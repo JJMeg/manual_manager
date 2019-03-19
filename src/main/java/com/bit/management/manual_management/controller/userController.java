@@ -1,6 +1,5 @@
 package com.bit.management.manual_management.controller;
 
-import com.bit.management.manual_management.dao.userDao;
 import com.bit.management.manual_management.entity.User;
 import com.bit.management.manual_management.entity.response;
 import com.bit.management.manual_management.service.userService;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -25,8 +23,10 @@ public class userController {
     u.setRoleid((byte) 0);
     u.setUsername("Meg");
     u.setUserpwd("123123");
-    userService.insert(u);
-    return u;
+    User uu = userService.getByUsername("meg");
+    System.out.println(u);
+    //analysisService.getYamlFile("/Users/jjmeg/IdeaProjects/manual_management/src/main/java/com/bit/management/manual_management/Analysis");
+    return uu;
   }
 
   @RequestMapping("/getuserJson")

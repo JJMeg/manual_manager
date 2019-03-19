@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 public interface userDao {
-//  Dao接口的方法需要与MapperXML对应
+  //  Dao接口的方法需要与MapperXML对应
 
-  User getByUsername(@Param("username") String username);
+  User getByUsername(String username);
 
   void addUser(User record);
 
