@@ -1,22 +1,15 @@
 package com.bit.management.manual_management.Analysis;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
-import org.springframework.boot.json.YamlJsonParser;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 public class yaml2Uri {
   public File getYamlFile(String dirPath) {
-    File file;
     String filePrefix = ".yaml";
     File dirFile = new File(dirPath);
     if (!dirFile.exists() || !dirFile.isDirectory()) {
@@ -32,11 +25,10 @@ public class yaml2Uri {
   }
 
   public Map<String, String> analyseYaml(File yamlFile) throws IOException {
-    Map<String, String> feature = new HashMap<>();
     Yaml yaml = new Yaml();
     Map<String, String> jsonMap = yaml.load(new FileInputStream(yamlFile));
     System.out.println(jsonMap);
-    return feature;
+    return jsonMap;
   }
 
   public static void main(String[] args) throws Exception {
