@@ -5,7 +5,6 @@ import org.yaml.snakeyaml.Yaml;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
 public class yaml2Uri {
@@ -24,10 +23,11 @@ public class yaml2Uri {
     return null;
   }
 
+
   public Map<String, String> analyseYaml(File yamlFile) throws IOException {
     Yaml yaml = new Yaml();
     Map<String, String> jsonMap = yaml.load(new FileInputStream(yamlFile));
-    System.out.println(jsonMap);
+    System.out.println(jsonMap.toString());
     return jsonMap;
   }
 
