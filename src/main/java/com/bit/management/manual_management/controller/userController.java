@@ -25,6 +25,7 @@ public class userController {
     u.setRoleid((byte) 0);
     u.setUsername("Meg");
     u.setUserpwd("123123");
+    userService.insert(u);
     return u;
   }
 

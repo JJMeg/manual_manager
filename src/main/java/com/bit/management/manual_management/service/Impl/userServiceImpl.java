@@ -16,7 +16,7 @@ public class userServiceImpl implements userService {
 
   @Override
   public void insert(User u) {
-
+    System.out.println(u.getUsername());
 
   }
 

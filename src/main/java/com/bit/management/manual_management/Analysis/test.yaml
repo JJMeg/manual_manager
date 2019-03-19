@@ -1,0 +1,97 @@
+# 数据说明文档 ###################################################################
+################################################################################
+
+#------------- 数据类型 dataType -------------#
+
+dataType: # 数据类型
+  surProcedure: # 手术术式
+  # HEARTBYPASS #心脏搭桥
+  # ENDOSCOPE #内镜
+  # ARTERYFIX #动脉
+  # HEPATICVESSEL #肝血管
+  # ORTHOPEDIC #骨科
+
+  imageSite: # 成像部位
+    # CORONARY #冠脉
+    AORTA #主动脉
+    # HEPATICVESSEL #肝血管
+    # BRAINVESSEL #脑血管
+    # RETINA #视网膜
+    # LIVER #肝
+    # KIDNEY #肾
+    # BRAIN #脑
+    # VERTEBRAL #脊椎
+    # LEGBONE #腿骨
+    # BONES #盆骨
+    # SKIN #皮肤
+    # NOSE #鼻腔
+    # EYE #眼部
+
+    # lesionType: # 病变类型
+    # BRAINLESION #脑肿瘤
+    # LIVERLESION #肝肿瘤
+    # ARTERYLESION #动脉瘤
+    # EYELESION #眼肿瘤
+    # STENOSIS #血管狭窄
+    # AORTICDISSECTION #主动脉夹层
+    # CIRRHOSIS #肝硬化
+    # CALCIFICATION #钙化
+    # NORMAL #正常
+
+    # imageType: # 成像类型
+    # CT
+    # 4DCT
+    # MR
+    # XRAY
+    # US
+    # ENDOSCOPEIMA
+    # PET
+    # fMRI
+    # POINTCLOUD #点云
+    # ECG #心电信号
+    # PIC #图片
+
+    # source: # 来源渠道
+    # ANZHEN #安贞
+    # 301DUAN #段
+    # 301LIANG #梁
+    # XIEHEHAN #韩
+    # BITCHEN #陈
+    # XINANUNI #西南大
+    # TONGREN #同仁
+    # PUBLIC #公开
+
+    # stage: # 采集阶段
+    # PREOPERATIVE #术前
+    # INTRAOPERATIVE #术中
+    # POSTOPERATIVE #术后
+
+    # goldStandard: # 是否金标准
+    # YES
+  # NO
+
+dataUsage: # 数据用途
+  segment: # 分割
+    # Optic nerve #视神经
+    # Aorta # 主动脉
+    # CoronaryArtery #冠脉
+    liver #肝脏
+    # skeleton #骨骼
+    # Eye tumor #眼肿瘤
+    # MultipleOrgans #多器官
+
+    # registration: #配准
+    # Brain #大脑
+    # Vessel #血管
+  # Liver #肝脏
+
+  reconstruct: #重建
+    vessel #血管
+    # nose #鼻腔
+  # US #超声
+
+  VR: 1#增强现实
+
+  restoration: 1#图像复原
+
+  # feature: 1#特征匹配
