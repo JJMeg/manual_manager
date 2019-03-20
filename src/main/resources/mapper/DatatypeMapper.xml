@@ -16,7 +16,7 @@
     <result column="goldStandard" jdbcType="BIT" property="goldstandard" />
   </resultMap>
 
-  <select id="getBySummaryId" parameterType="long" resultType="com.bit.management.manual_management.entity.Datasummary">
+  <select id="getBySummaryId" parameterType="long" resultType="com.bit.management.manual_management.entity.Datatype">
     SELECT * FROM
     dataType
     WHERE
