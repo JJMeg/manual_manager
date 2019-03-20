@@ -16,41 +16,41 @@ public class dataTypeServiceImpl implements dataTypeService {
 
   @Override
   public Datasummary getBySummaryId(Long id) {
-    return null;
+    return dataTypeDao.getBySummaryId(id);
   }
 
   @Override
   public List<Long> getAllBySurProcedure(String surProcedure) {
-    return null;
+    return dataTypeDao.getAllBySurProcedure(surProcedure);
   }
 
   @Override
   public List<Long> getAllByImageSite(String imageSite) {
-    return null;
+    return dataTypeDao.getAllByImageSite(imageSite);
   }
 
   @Override
   public List<Long> getAllByLesionType(String lesionType) {
-    return null;
+    return dataTypeDao.getAllByLesionType(lesionType);
   }
 
   @Override
   public List<Long> getAllByImageType(String imageType) {
-    return null;
+    return dataTypeDao.getAllByImageType(imageType);
   }
 
   @Override
   public List<Long> getAllBySource(String source) {
-    return null;
+    return dataTypeDao.getAllBySource(source);
   }
 
   @Override
   public List<Long> getAllByStage(String stage) {
-    return null;
+    return dataTypeDao.getAllByStage(stage);
   }
 
   @Override
   public List<Long> getAllByGoldStandard(boolean goldStandard) {
-    return null;
+    return dataTypeDao.getAllByGoldStandard(goldStandard);
   }
 }
