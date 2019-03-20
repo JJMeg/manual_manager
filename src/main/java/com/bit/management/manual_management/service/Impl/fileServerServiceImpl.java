@@ -4,7 +4,9 @@ import com.bit.management.manual_management.dao.fileServerDao;
 import com.bit.management.manual_management.entity.Fileserver;
 import com.bit.management.manual_management.service.fileServerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("fileServerService")
 public class fileServerServiceImpl implements fileServerService {
 
   @Autowired
