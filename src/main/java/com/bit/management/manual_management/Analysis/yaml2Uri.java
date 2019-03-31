@@ -25,6 +25,8 @@ public class yaml2Uri {
 
 
   public Map<String, String> analyseYaml(File yamlFile) throws IOException {
+    if (yamlFile == null)
+      return null;
     Yaml yaml = new Yaml();
     Map<String, String> jsonMap = yaml.load(new FileInputStream(yamlFile));
     System.out.println(jsonMap.toString());

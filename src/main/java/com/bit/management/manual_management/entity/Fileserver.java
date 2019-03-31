@@ -17,7 +17,7 @@ public class Fileserver {
     /**
      * 服务器端口
      */
-    private Short port;
+    private int port;
 
     /**
      * 服务器名字
@@ -65,7 +65,7 @@ public class Fileserver {
      *
      * @return port - 服务器端口
      */
-    public Short getPort() {
+    public int getPort() {
         return port;
     }
 
@@ -74,7 +74,7 @@ public class Fileserver {
      *
      * @param port 服务器端口
      */
-    public void setPort(Short port) {
+    public void setPort(int port) {
         this.port = port;
     }
 
