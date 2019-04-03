@@ -10,13 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/mybatis")
 public class CRUDController {
-
+  @Autowired
+  private userService userService;
 
   @RequestMapping("/addUser")
   public boolean addUser(User u) {
-    u.setUserpwd("qaz");
-    u.setUsername("qaz");
+    u.setUserpwd("123");
+    u.setUsername("123");
     u.setRoleid((byte)0);
+
     return true;
   }
 

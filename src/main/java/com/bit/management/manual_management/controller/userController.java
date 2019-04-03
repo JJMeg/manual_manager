@@ -3,15 +3,21 @@ package com.bit.management.manual_management.controller;
 import com.bit.management.manual_management.entity.User;
 import com.bit.management.manual_management.entity.response;
 import com.bit.management.manual_management.service.userService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
 public class userController {
+
+  private static final Logger logger = Logger.getLogger(userController.class.getName());
 
   @Autowired
   private userService userService;
@@ -55,9 +61,63 @@ public class userController {
     User u = new User();
     u.setUserpwd("qaz");
     u.setUsername("123");
-    u.setRoleid((byte)0);
+    u.setRoleid((byte) 0);
     userService.addUser(u);
 
     return u;
   }
+
+  /**
+   * 注册新用户
+   *
+   * @return response
+   */
+  @RequestMapping("/addUser")
+  @ResponseBody
+  public response addUser(User u) {
+    u.setRoleid((byte) 0);
+
+    userService.addUser(u);
+    return response.ok();
+  }
+
+  /**
+   * 注册新用户
+   *
+   * @return response
+   */
+  @RequestMapping("/register")
+  @ResponseBody
+  public response register(User u) {
+    userService.addUser(u);
+    return response.ok();
+  }
+
+  /**
+   * 获取所有用户
+   *
+   * @return users list
+   */
+  @RequestMapping(value = "/getAllUser", method = RequestMethod.GET)
+  @ResponseBody
+  public List<User> getAllUser() {
+    List<User> users = userService.getAllUser();
+    return users;
+  }
+
+  /**
+   * 获取所有用户
+   *
+   * @return users list
+   */
+  @RequestMapping(value = "/login")
+  @ResponseBody
+  public String login(User u) {
+    User user = userService.getByUsername(u.getUsername());
+    if (user.getUserpwd().compareTo(u.getUserpwd()) == 0){
+      return "backend/data-detail.html";
+    }
+    return "error";
+  }
+
 }

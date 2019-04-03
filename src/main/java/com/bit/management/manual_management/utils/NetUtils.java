@@ -4,14 +4,11 @@ import com.bit.management.manual_management.entity.Fileserver;
 
 import java.io.*;
 
-import org.apache.commons.net.ftp.FTP;
-import org.apache.commons.net.ftp.FTPClient;
-import org.apache.commons.net.ftp.FTPFile;
-import org.apache.commons.net.ftp.FTPReply;
+import org.apache.commons.net.ftp.*;
 import org.apache.log4j.Logger;
 
 public class NetUtils {
-  private static final Logger logger = Logger.getLogger(NetUtils.class);
+  private static final Logger logger = Logger.getLogger(NetUtils.class.getName());
   public FTPClient ftpClient = new FTPClient();
 
   /**
@@ -363,11 +360,13 @@ public class NetUtils {
   public static void main(String[] args) {
     NetUtils myFtp = new NetUtils();
     try {
-      Fileserver f = new Fileserver();
-      f.setIp("10.55.223.210");
-      f.setPort(21);
-      myFtp.connect(f,"anonymous"," ");
-      System.out.println("success");
+//      Fileserver f = new Fileserver();
+//      f.setIp("10.55.223.210");
+//      f.setPort(21);
+//      myFtp.connect(f,"anonymous"," ");
+//      System.out.println("success");
+      FTPSClient a = new FTPSClient();
+      a.connect("10.55.223.210",21);
       // myFtp.ftpClient.makeDirectory(new
       // String("电视剧".getBytes("GBK"),"iso-8859-1"));
       // myFtp.ftpClient.changeWorkingDirectory(new

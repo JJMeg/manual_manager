@@ -155,19 +155,19 @@
 
 
         <!--<dependency>-->
-            <!--<groupId>com.fasterxml.jackson.dataformat</groupId>-->
-            <!--<artifactId>jackson-dataformat-yaml</artifactId>-->
-            <!--<version>2.3.0</version>-->
+        <!--<groupId>com.fasterxml.jackson.dataformat</groupId>-->
+        <!--<artifactId>jackson-dataformat-yaml</artifactId>-->
+        <!--<version>2.3.0</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>com.fasterxml.jackson.core</groupId>-->
-            <!--<artifactId>jackson-databind</artifactId>-->
-            <!--<version>2.2.3</version>-->
+        <!--<groupId>com.fasterxml.jackson.core</groupId>-->
+        <!--<artifactId>jackson-databind</artifactId>-->
+        <!--<version>2.2.3</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.apache.commons</groupId>-->
-            <!--<artifactId>commons-lang3</artifactId>-->
-            <!--<version>3.4</version>-->
+        <!--<groupId>org.apache.commons</groupId>-->
+        <!--<artifactId>commons-lang3</artifactId>-->
+        <!--<version>3.4</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.yaml</groupId>
@@ -181,12 +181,22 @@
             <version>3.6</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>net.imagej</groupId>-->
+            <!--<artifactId>ij</artifactId>-->
+            <!--<version>1.51s</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>ij</artifactId>
+            <version>1.52k</version>
+        </dependency>
 
         <!--<dependency>-->
-            <!--<groupId>net.minidev</groupId>-->
-            <!--<artifactId>json-smart</artifactId>-->
-            <!--<version>2.3</version>-->
-            <!--<scope>compile</scope>-->
+        <!--<groupId>net.minidev</groupId>-->
+        <!--<artifactId>json-smart</artifactId>-->
+        <!--<version>2.3</version>-->
+        <!--<scope>compile</scope>-->
         <!--</dependency>-->
 
         <!--&lt;!&ndash; 引入 redis 依赖 &ndash;&gt;-->
@@ -194,6 +204,7 @@
         <!--<groupId>org.springframework.boot</groupId>-->
         <!--<artifactId>spring-boot-starter-data-redis</artifactId>-->
         <!--</dependency>-->
+
 
     </dependencies>
 

@@ -4,15 +4,36 @@
 <head>
     <meta charset="utf-8">
     <title>智能归档平台登录页</title>
-
     <link href="/static/web/css/style.css" rel="stylesheet">
     <link href="/static/web/css/page/backend/login.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/default/easyui.css"
+          th:href="@{jquery-easyui-1.6.10/themes/default/easyui.css}"/>
+
+    <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/icon.css"
+          th:href="@{jquery-easyui-1.6.10/themes/icon.css}"/>
+
+    <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/color.css"
+          th:href="@{jquery-easyui-1.6.10/themes/color.css}"/>
+
+    <script type="text/javascript" src="../../jquery-easyui-1.6.10/jquery.min.js"
+            th:src="@{jquery-easyui-1.6.10/jquery.min.js}"></script>
+
+    <script type="text/javascript" src="../../jquery-easyui-1.6.10/ajaxfileupload.js"
+            th:src="@{jquery-easyui-1.6.10/ajaxfileupload.js}"></script>
+
+    <script type="text/javascript" src="../../jquery-easyui-1.6.10/jquery.easyui.min.js"
+            th:src="@{jquery-easyui-1.6.10/jquery.easyui.min.js}"></script>
+
+    <script type="text/javascript" src="../../js/upload.js" th:src="@{js/upload.js}"></script>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript"></script>
 
 </head>
 <body>
 <div id="hd">
     <div class="logo main-content">
-        <h1><a href="../index.html" title="云平台">账号登录</a></h1>
+        <h1><a href="index.html" title="云平台">账号登录</a></h1>
         <ul class="head-link">
             <li><a href="">平台首页</a></li>
             <li><a href="">帮助中心</a></li>
@@ -30,19 +51,19 @@
                     <i class="iconfont">&#xe617;</i>
                     <span>请输入用户名</span>
                 </div>
-                <form th:name="loginForm" method="post" action="user/login">
+                <form>
                     <!--登陆表单-->
                     <div class="input-item">
                         <p>登录名：</p>
-                        <input type="text" name="username" placeholder="请输入账号/邮箱">
+                        <input type="text" name="name" placeholder="请输入账号/邮箱">
                     </div>
 
                     <div class="input-item">
                         <p>登录密码：</p>
-                        <input type="text" name="userpwd" placeholder="请输入密码">
+                        <input type="password" name="password" placeholder="请输入密码">
                     </div>
-                    <div class="login-btn">
-                        <input type="submit"  value="登陆" style="color: #fff;background: #00a2ca">
+                    <div >
+                        <input type="button" onclick="login()" value="登陆" >
                     </div>
                 </form>
             </div>
@@ -69,14 +90,15 @@
 
 <script>
     function login() {
+        alert(":::");
         $.ajax({
             url: '/user/login',
             type: 'get',
             dataType: 'text',
             data: {"username": $('#name').val(), "userpwd": $('#password').val()},
-            success: function (data) {
+            success: function (d) {
                 if (d === "success") {
-                    window.location.href = 'ip.html';
+                    window.location.href = 'buy.html';
                 } else {
                     window.location.href = 'error.html';
                 }

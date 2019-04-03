@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.bit.management.manual_management.mapper.LabelsummaryMapper">
+<mapper namespace="com.bit.management.manual_management.dao.labelSummaryDao">
   <resultMap id="BaseResultMap0" type="com.bit.management.manual_management.entity.Labelsummary">
     <!--
       WARNING - @mbg.generated
@@ -9,36 +9,18 @@
     <result column="labelKey" jdbcType="VARCHAR" property="labelkey" />
     <result column="labelValue" jdbcType="VARCHAR" property="labelvalue" />
   </resultMap>
-  <resultMap id="BaseResultMap" type="com.bit.management.manual_management.entity.Labelsummary">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="SMALLINT" property="id" />
-    <result column="labelKey" jdbcType="VARCHAR" property="labelkey" />
-    <result column="labelValue" jdbcType="VARCHAR" property="labelvalue" />
-  </resultMap>
-  <resultMap id="BaseResultMap1" type="com.bit.management.manual_management.entity.Labelsummary">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="SMALLINT" property="id" />
-    <result column="labelKey" jdbcType="VARCHAR" property="labelkey" />
-    <result column="labelValue" jdbcType="VARCHAR" property="labelvalue" />
-  </resultMap>
-  <resultMap id="BaseResultMap2" type="com.bit.management.manual_management.entity.Labelsummary">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="SMALLINT" property="id" />
-    <result column="labelKey" jdbcType="VARCHAR" property="labelkey" />
-    <result column="labelValue" jdbcType="VARCHAR" property="labelvalue" />
-  </resultMap>
-  <resultMap id="BaseResultMap3" type="com.bit.management.manual_management.entity.Labelsummary">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="SMALLINT" property="id" />
-    <result column="labelKey" jdbcType="VARCHAR" property="labelkey" />
-    <result column="labelValue" jdbcType="VARCHAR" property="labelvalue" />
-  </resultMap>
+  <select id="getBylabelKey" parameterType="int" resultType="string">
+    SELECT labelvalue FROM
+    labelSummary
+    WHERE
+    labelkey = #{labelKey}
+  </select>
+
+  <select id="getAllBylabelKey" parameterType="int" resultType="com.bit.management.manual_management.entity.Labelsummary">
+    SELECT * FROM
+    labelSummary
+    WHERE
+    labelkey = #{labelKey}
+  </select>
+
 </mapper>

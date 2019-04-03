@@ -2,6 +2,7 @@ package com.bit.management.manual_management;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 //扫描mybatis mapper包路径
 @MapperScan(basePackages = "com.bit.management.manual_management.mapper.*")
+//@ComponentScan(basePackages = "com.bit.management.manual_management.controller")
 //@EnableTransactionManagement
 public class ManualManagementApplication {
 

@@ -22,6 +22,13 @@ public class Labelsummary {
     private String labelvalue;
 
     /**
+     * 标签值描述
+     */
+    @Column(name = "description")
+    private String description;
+
+
+    /**
      * 获取id
      *
      * @return id - id
@@ -73,5 +80,23 @@ public class Labelsummary {
      */
     public void setLabelvalue(String labelvalue) {
         this.labelvalue = labelvalue;
+    }
+
+    /**
+     * 获取标签值描述
+     *
+     * @return labelValue - 标签值
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * 设置标签值描述
+     *
+     * @param description 标签值
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

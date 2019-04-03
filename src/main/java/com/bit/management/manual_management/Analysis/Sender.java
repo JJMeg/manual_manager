@@ -2,6 +2,7 @@ package com.bit.management.manual_management.Analysis;
 
 import com.bit.management.manual_management.entity.Fileserver;
 import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPSClient;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -71,10 +72,10 @@ public class Sender {
 
   }
   public static void main(String[] args) throws IOException {
-    FTPClient f = new FTPClient();
-    f.connect("10.55.223.210");
+    FTPSClient f = new FTPSClient();
+    f.connect("10.55.223.210",21);
     f.login("anonymous","\n");
-    System.out.println("sd");
+    System.out.println( f.getReplyCode() );
   }
 }
 

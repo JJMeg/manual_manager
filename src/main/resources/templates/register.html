@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <title>智能归档平台注册页</title>
-    <link href="/static/web/css/style.css" rel="stylesheet">
-    <link href="/static/web/css/page/backend/login.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/page/backend/register.css" rel="stylesheet">
     <script>
         function checkForm() {
             var patten = /^[a-zA-Z]\w{3,15}$/ig;
@@ -17,7 +17,6 @@
                 return false;
             }
         }
-
         function showUserTips(){
 
             document.getElementById("userTips").innerHTML = "用户名必填";
@@ -33,19 +32,7 @@
                 alert("用户名非法！");
                 return false;
             }else{
-                document.getElementById("pwdErr").innerHTML = "用户名必填";
-            }
-            document.getElementById("pwdErr").innerHTML = "";
-
-        }
-
-        function checkPwd() {
-            var pwd1 = document.getElementById("password").value;
-            var pwd2 = document.getElementById("confirmPwd").value;
-            if (pwd1 != pwd2){
-                document.getElementById("pwdErr").innerHTML = "密码不相同";
-            }else{
-                document.getElementById("pwdErr").innerHTML = "";
+                document.getElementById("userTips").innerHTML = "";
             }
         }
     </script>
@@ -70,7 +57,7 @@
             <div class="input-hd"><h2>用户注册</h2></div>
 
             <div class="input-area">
-                <form name="regForm" method="post" action="/user/addUser" >
+                <form th:name="regForm" method="post" action="user/addUser" >
                     <!--登陆表单-->
                     <div class="input-item">
                         <p>登录名：</p>
@@ -79,16 +66,10 @@
 
                     <div class="input-item">
                         <p>登录密码：</p>
-                        <input type="text" id="password" name="userpwd" placeholder="请输入密码" >
+                        <input type="text" id="password" name="userpwd" placeholder="请输入密码">
                     </div>
-
-                    <div class="input-item">
-                        <p>确认登录密码：</p>
-                        <input type="text" name="confirmPwd" placeholder="请再输入密码" onblur="checkPwd()"><span id="pwdErr"></span>
-                    </div>
-
                     <div class="login-btn" >
-                        <input type="submit" value="注册" onsubmit="register()" style="color: #fff;background: #00a2ca">
+                        <input type="submit" value="注册"  style="color: #fff;background: #00a2ca">
                     </div>
                 </form>
             </div>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<header>
+<link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/default/easyui.css"
+      th:href="@{jquery-easyui-1.6.10/themes/default/easyui.css}"/>
+
+<link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/icon.css"
+      th:href="@{jquery-easyui-1.6.10/themes/icon.css}"/>
+
+<link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/color.css"
+      th:href="@{jquery-easyui-1.6.10/themes/color.css}"/>
+
+<script type="text/javascript" src="../../jquery-easyui-1.6.10/jquery.min.js"
+        th:src="@{jquery-easyui-1.6.10/jquery.min.js}"></script>
+
+<script type="text/javascript" src="../../jquery-easyui-1.6.10/ajaxfileupload.js"
+        th:src="@{jquery-easyui-1.6.10/ajaxfileupload.js}"></script>
+
+<script type="text/javascript" src="../../jquery-easyui-1.6.10/jquery.easyui.min.js"
+        th:src="@{jquery-easyui-1.6.10/jquery.easyui.min.js}"></script>
+
+<script type="text/javascript" src="../../js/upload.js" th:src="@{js/upload.js}"></script>
+</header>
+<body>
+<form>
+    <div id="bd">
+        <div class="main-wrap-bk clearfix">
+            <div class="bd-content-wrap">
+                <div class="bd-content">
+
+                    <div class="self-work">
+
+                        <div class="self-work-content page">
+                            <div class="title-left-line-g"></div>
+
+                            <div class="section">
+                                <div class="btn-group">
+                                    <button class="btn btn-blue" onclick="dir_chose()">
+                                        <i class="iconfont">&#xe628;</i>
+                                        <span>选择文件夹</span>
+                                    </button>
+
+                                </div>
+
+                                <br/>
+                                <table class="kv-table">
+                                    <tbody>
+                                    <tr>
+                                        <td class="kv-label">节点名称：</td>
+                                        <td>服务器1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="kv-label">IP地址：</td>
+                                        <td>1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="kv-label">端口号：</td>
+                                        <td>3000</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="kv-label">服务时间：</td>
+                                        <td>2019-03-15</td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+
+                                <br/>
+                                <br/>
+                                <table class="kv-table">
+                                    <tbody>
+                                    <tr>
+                                        <td class="kv-label">节点名称：</td>
+                                        <td>服务器1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="kv-label">IP地址：</td>
+                                        <td>1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="kv-label">端口号：</td>
+                                        <td>3000</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="kv-label">服务时间：</td>
+                                        <td>2019-03-15</td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+
+    function dir_chose() {
+
+    }
+</script>
+</body>
+
+</html>

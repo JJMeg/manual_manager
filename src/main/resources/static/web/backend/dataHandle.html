@@ -10,24 +10,26 @@
     <link href="../js/datepicker/css/bootstrap.css" rel="stylesheet">
     <link href="../js/datepicker/css/bootstrap-datepicker.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="../static/jquery-easyui-1.6.10/themes/default/easyui.css"
+    <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/default/easyui.css"
           th:href="@{jquery-easyui-1.6.10/themes/default/easyui.css}"/>
-    <link rel="stylesheet" type="text/css" href="../static/jquery-easyui-1.6.10/themes/icon.css"
-          th:href="@{jquery-easyui-1.6.10/themes/icon.css}"/>
-    <link rel="stylesheet" type="text/css" href="../static/jquery-easyui-1.6.10/themes/color.css"
-          th:href="@{jquery-easyui-1.6.10/themes/color.css}"/>
-    <script type="text/javascript" src="../static/jquery-easyui-1.6.10/jquery.min.js"
-            th:src="@{jquery-easyui-1.6.10/jquery.min.js}"></script>
-    <script type="text/javascript" src="../static/jquery-easyui-1.6.10/ajaxfileupload.js"
-            th:src="@{jquery-easyui-1.6.10/ajaxfileupload.js}"></script>
-    <script type="text/javascript" src="../static/jquery-easyui-1.6.10/jquery.easyui.min.js"
-            th:src="@{jquery-easyui-1.6.10/jquery.easyui.min.js}"></script>
-    <script type="text/javascript" src="../static/js/upload.js" th:src="@{js/upload.js}"></script>
 
-    <link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/jeasyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/jeasyui/themes/icon.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/icon.css"
+          th:href="@{jquery-easyui-1.6.10/themes/icon.css}"/>
+
+    <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.6.10/themes/color.css"
+          th:href="@{jquery-easyui-1.6.10/themes/color.css}"/>
+
+    <script type="text/javascript" src="../../jquery-easyui-1.6.10/jquery.min.js"
+            th:src="@{jquery-easyui-1.6.10/jquery.min.js}"></script>
+
+    <script type="text/javascript" src="../../jquery-easyui-1.6.10/ajaxfileupload.js"
+            th:src="@{jquery-easyui-1.6.10/ajaxfileupload.js}"></script>
+
+    <script type="text/javascript" src="../../jquery-easyui-1.6.10/jquery.easyui.min.js"
+            th:src="@{jquery-easyui-1.6.10/jquery.easyui.min.js}"></script>
+
+    <script type="text/javascript" src="../../js/upload.js" th:src="@{js/upload.js}"></script>
+
 </head>
 <body>
 <div id="hd">
@@ -308,6 +310,10 @@
                         </table>
                     </div>
 
+                    <div id="page"></div>
+                    <script>
+                        $("#page").load("form-importDir.html");
+                    </script>
 
                 </div>
             </div>
@@ -432,6 +438,8 @@
             <button class="btn btn-blue">提交</button>
             <button class="btn">关闭</button>
         </div>
+
+
     </div>
 </div>
 

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service("userService")
 public class userServiceImpl implements userService {
 
@@ -32,9 +34,15 @@ public class userServiceImpl implements userService {
   }
 
   @Override
+  public List<User> getAllUser() {
+    return userDao.getAllUser();
+  }
+
+  @Override
   public PageInfo<User> findAllUser(int pageNum, int pageSize) {
     return null;
   }
+
 
 //  @Autowired
 // // private userDao userDao;

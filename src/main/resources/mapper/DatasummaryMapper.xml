@@ -39,35 +39,35 @@
     id = #{id}
   </select>
 
-  <select id="getByPatientName" parameterType="string" resultType="list">
+  <select id="getByPatientName" parameterType="string" resultType="com.bit.management.manual_management.entity.Datasummary">
     SELECT * FROM
     dataSummary
     WHERE
     patientname = #{patientame}
   </select>
 
-  <select id="getByPatientId" parameterType="string" resultType="list">
+  <select id="getByPatientId" parameterType="string" resultType="com.bit.management.manual_management.entity.Datasummary">
     SELECT * FROM
     dataSummary
     WHERE
     patientid = #{patientid}
   </select>
 
-  <select id="getByCreator" parameterType="string" resultType="list">
+  <select id="getByCreator" parameterType="string" resultType="com.bit.management.manual_management.entity.Datasummary">
     SELECT * FROM
     dataSummary
     WHERE
     creator = #{creator}
   </select>
 
-  <select id="getByFileName" parameterType="string" resultType="list">
+  <select id="getByFileName" parameterType="string" resultType="com.bit.management.manual_management.entity.Datasummary">
     SELECT * FROM
     dataSummary
     WHERE
     filename = #{filename}
   </select>
 
-  <select id="getByFileServer" parameterType="int" resultType="list">
+  <select id="getByFileServer" parameterType="int" resultType="com.bit.management.manual_management.entity.Datasummary">
     SELECT * FROM
     dataSummary
     WHERE

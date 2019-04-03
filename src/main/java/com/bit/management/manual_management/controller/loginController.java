@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(value = "/")
 public class loginController {
-  @RequestMapping(value = "/")
+  @RequestMapping(value = "login")
   public String hello() {
     //return "home.html";
-    return "index";
+    return "login";
   }
 
 }

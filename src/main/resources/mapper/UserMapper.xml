@@ -18,4 +18,9 @@
     WHERE
     username = #{username}
   </select>
+
+    <select id="getAllUser" resultType="com.bit.management.manual_management.entity.User">
+    SELECT * FROM
+    user
+  </select>
 </mapper>
