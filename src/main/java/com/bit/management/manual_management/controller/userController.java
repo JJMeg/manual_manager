@@ -115,7 +115,7 @@ public class userController {
   public String login(User u) {
     User user = userService.getByUsername(u.getUsername());
     if (user.getUserpwd().compareTo(u.getUserpwd()) == 0){
-      return "backend/data-detail.html";
+      return "index";
     }
     return "error";
   }

@@ -6,6 +6,7 @@ import com.bit.management.manual_management.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/mybatis")
@@ -22,4 +23,10 @@ public class CRUDController {
     return true;
   }
 
+  @RequestMapping("/getUser")
+  @ResponseBody
+  public User getUser() {
+    User u = userService.getByUsername("qaz");
+    return u;
+  }
 }

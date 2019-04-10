@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>template图像站点管理</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/backend.css" rel="stylesheet">
+    <link href="../css/page/backend/setServer.css" rel="stylesheet"></head>
+<link href="../js/datepicker/css/bootstrap.css" rel="stylesheet">
+<link href="../js/datepicker/css/bootstrap-datepicker.css" rel="stylesheet">
+<body>
+<div id="hd">
+
+    <div class="header-nav">
+        <div class="navigation-inner">
+            <div class="logo">
+                <h1>
+                    <a href="mgt_console.html" class="logo-img">主页</a>
+                </h1>
+            </div>
+
+
+            <div class="login-user">
+                <i class="iconfont">&#xe60d;</i>
+                <a class="javascript:;">您好！testUser</a>
+                <i class="iconfont">&#xe61c;</i>
+
+                <div class="user-opt-panel">
+                    <ul class="user-opt">
+                        <li>
+                            <a href="account_center.html">
+                                <i class="iconfont">&#xe60d;</i>
+                                <span class="pf-opt-name">用户信息</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order.html">
+                                <i class="iconfont">&#xe60c;</i>
+                                <span class="pf-opt-name">用户贡献</span>
+                            </a>
+                        </li>
+                        <li class="div-line">
+                            <a href="login.html">
+                                <i class="iconfont">&#xe60b;</i>
+                                <span class="pf-opt-name">退出</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="bd">
+    <div class="main-wrap-bk clearfix">
+        <div class="sider-bar-bk">
+            <ul class="sider-nav">
+                <li class="sider-nav-item current">
+                    <h3>
+                        <a href="javascript:;">
+                            <i class="iconfont">&#xe610;</i>
+                            <span>数据管理</span>
+                            <i class="iconfont arrow-right">&#xe611;</i>
+                            <i class="iconfont arrow-down">&#xe615;</i>
+                        </a>
+                    </h3>
+                    <ul class="sider-nav-s">
+                        <li><a href="cloud_service.html">智能导入</a></li>
+                        <li><a href="dataHandle.html">数据下载</a></li>
+                        <li><a href="safe_protect.html">数据总览</a></li>
+                        <li class="current"><a href="setServer.html">站点设置</a></li>
+                    </ul>
+                </li>
+
+                <li class="sider-nav-item">
+                    <h3>
+                        <a href="javascript:;">
+                            <i class="iconfont">&#xe613;</i>
+                            <span>数据报告</span>
+                            <i class="iconfont arrow-right">&#xe611;</i>
+                            <i class="iconfont arrow-down">&#xe615;</i>
+                        </a>
+                    </h3>
+                    <ul class="sider-nav-s">
+                        <li><a href="#">数据统计</a></li>
+                        <li><a href="#">数据分析</a></li>
+                        <li><a href="#">数据介绍</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bd-content-wrap">
+            <div class="bd-content">
+                <div class="title-left-line">文件服务器工作目录</div>
+
+                <div class="self-work">
+
+                    <div class="self-work-content page">
+                        <div class="title-left-line-g"></div>
+
+                        <div class="section">
+                            <div class="btn-group">
+                                <button class="btn btn-blue">
+                                    <i class="iconfont">&#xe628;</i>
+                                    <span>新增</span>
+                                </button>
+
+                                <button class="btn btn-default">
+                                    <i class="iconfont">&#xe608;</i>
+                                    <span>修改</span>
+                                </button>
+
+                                <button class="btn btn-default">
+                                    <i class="iconfont">&#xe627;</i>
+                                    <span>删除</span>
+                                </button>
+                            </div>
+
+                            <br />
+                            <table class="kv-table">
+                                <tbody>
+                                <tr>
+                                    <td class="kv-label">节点名称：</td>
+                                    <td>服务器1</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="kv-label">IP地址：</td>
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="kv-label">端口号：</td>
+                                    <td>3000</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="kv-label">服务时间：</td>
+                                    <td>2019-03-15</td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+
+                            <br />
+                            <br />
+                            <table class="kv-table">
+                                <tbody>
+                                <tr>
+                                    <td class="kv-label">节点名称：</td>
+                                    <td>服务器1</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="kv-label">IP地址：</td>
+                                    <td>1</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="kv-label">端口号：</td>
+                                    <td>3000</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="kv-label">服务时间：</td>
+                                    <td>2019-03-15</td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../js/datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="../js/jquery.pagination.js"></script>
+<script type="text/javascript">
+
+
+    $(window).resize(function() {
+        $('.self-work .sider, .self-work .self-work-content').height($(window).height() - 165);
+    }).resize();
+
+
+</script>
+</body>
+</html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
-    <title>智能归档平台注册页</title>
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/page/backend/register.css" rel="stylesheet">
+    <title>template智能归档平台注册页</title>
+    <link href="/static/web/css/style.css" rel="stylesheet">
+    <link href="/static/web/css/page/backend/register.css" rel="stylesheet">
     <script>
         function checkForm() {
             var patten = /^[a-zA-Z]\w{3,15}$/ig;
@@ -43,7 +43,7 @@
 
 <div id="hd">
     <div class="logo main-content">
-        <h1><a href="../index.html" title="管理平台">账号注册</a></h1>
+
         <ul class="head-link">
             <li><a href="">平台首页</a></li>
             <li><a href="">帮助中心</a></li>
@@ -68,6 +68,12 @@
                         <p>登录密码：</p>
                         <input type="text" id="password" name="userpwd" placeholder="请输入密码">
                     </div>
+
+                    <div class="input-item">
+                        <p>登录密码：</p>
+                        <input type="text" id="passwordCon" name="userpwdCon" placeholder="请再次输入密码">
+                    </div>
+
                     <div class="login-btn" >
                         <input type="submit" value="注册"  style="color: #fff;background: #00a2ca">
                     </div>
